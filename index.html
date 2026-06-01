@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu</title>
+    <!-- Menghubungkan file style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container Animasi Background -->
+    <div id="hearts-container"></div>
+
+    <!-- Konten Utama -->
+    <div class="glass-container">
+        <div class="letter-content">
+            <p>Hai Sayang, kamu tau apa yang buaya sering lakukan? dia ngomong "kalo aku chat ada yang marah ga?" WKWKWK, bukan sebenernya buaya itu binatang paling setia, dan paling pemberani dalam menjaga hubungannya. aku harap kita selalu kaya gitu, masalah itu biasa, tapi bagaimana respon kita itu yang diuji.</p>
+            
+            <p>aku ga mau jadi orang yang overthinking, aku ga mau jadi orang yang selalu termakan hal hal negatif, aku bersyukur kamu ada untuk ingetin aku, long text yang kamu kasih itu motivasi buat aku terus memperbaiki diri. aku juga belajar cinta itu bukan 100 to 100000 tapi 0 ke tak terbatas, aku bukan bilang kamu ga 100% buat aku, yang aku maksud ibarat sebuah <span class="highlight-text">program bisnis di jalanin dan ada 2 ide yang berbeda kita harus memfilter itu</span> (aku pake gambaran bisnis biar kamu gampang nangkep), kita harus memilih mana yang bisa kita kembangin, sama halnya cinta, kita saling melengkapi dari apa yang kurang.</p>
+            
+            <p>kamu tau aku selalu berusaha jadi yang terbaik buat kamu, aku mau setara sama kamu, aku mau km jadi pendampingku bukan hanya sebatas pacar tapi masa depanku juga. kadang aku ga bisa ngasih apa yang kamu mau aku sedih, kaya yang aku bilang mungkin aku menang di hati kamu tapi aku merasa kalah sama sainganmu atau orang orang yang bisa kasih kamu lebih, tapi gapapa mulai sekarang aku jadiin motivasi buat aku bisa sukses demi kamu, demi aku, demi kita (anjay kata kata jason 2026) WKWKWK.</p>
+            
+            <p>sayang, aku tau aku banyak salah, aku tau aku banyak kurang, aku tau aku banyak gagal memahami kamu, tapi boleh ya aku minta tolong bantu aku, ajarin aku jadi yang bisa ngertiin kamu, yang selalu bisa jadi seseorang yang akan selalu mendampingi kamu.</p>
+            
+            <p>aku harap hubungan ini sampai nikah ya, maafin aku kalo aku ngasih long textnya lewat website ini, private kok, cuman kamu yang tau.....</p>
+            
+            <div class="signature">
+                <p class="label">for my lovely partner</p>
+                <p class="name">-Felina Fransiska Elwi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk efek interaktif -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.classList.add('heart');
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            
+            document.getElementById('hearts-container').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
